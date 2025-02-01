@@ -13,12 +13,15 @@ const config: Config = {
       screens: {
         xs: "475px",
       },
+      backgroundColor: {
+        "black-transparent": "rgba(0, 0, 0, 0.3)",
+      },
       colors: {
         primary: {
-          "100": "#FFE8F0",
-          DEFAULT: "#EE2B69",
+          "100": "#f5f3fe",
+          DEFAULT: "#7e39e1",
         },
-        secondary: "#FBE843",
+        secondary: "#f5c53d",
         black: {
           "100": "#333333",
           "200": "#141413",
