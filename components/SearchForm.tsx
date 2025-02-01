@@ -9,7 +9,7 @@ const SearchForm = ({ query }: { query?: string }) => {
         name="query"
         defaultValue={query}
         className="search-input"
-        placeholder="Search Startup"
+        placeholder="Search Startups"
       />
 
       {/* button search */}
@@ -17,7 +17,7 @@ const SearchForm = ({ query }: { query?: string }) => {
         {query && <SearchFormReset />}
 
         <button type="submit" className="search-btn text-white">
-          <Search  />
+          <Search />
         </button>
       </div>
     </Form>
