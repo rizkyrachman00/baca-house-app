@@ -1,21 +1,25 @@
-import ButtonCta from "@/components/ButtonCta";
+import SearchForm from "@/components/SearchForm";
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ query?: string }>;
+}) {
+  const query = (await searchParams).query;
+
   return (
     <>
-      <section className="background_image">
-        <div className="black_transparent_container">
-          <h1 className="heading">
-            Bimbel Bu Wahyu - Belajar Membaca & Menulis Dengan Seru
-          </h1>
+      <section className="pink_container">
+        <h1 className="heading">
+          Pitch Your Startup, <br />
+          Connect With Entrepreneurs
+        </h1>
 
-          <p className="sub-heading !max-w-3xl">
-            Berikan anak Anda pengalaman belajar yang menyenangkan dan efektif.
-            Mari mulai petualangan membaca dan menulis bersama kami!
-          </p>
+        <p className="sub-heading !max-w-3xl">
+          Submit Ideas, Vote on Pitches, and Get Noticed in Virtual
+        </p>
 
-          <ButtonCta />
-        </div>
+        <SearchForm query={query} />
       </section>
     </>
   );
